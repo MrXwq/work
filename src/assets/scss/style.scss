@@ -1,0 +1,159 @@
+@import './variables';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    // 根元素字体大小
+    font-size: 13px;
+}
+
+body {
+    background: #f7f7f7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@each $index,$val in $colors {
+    .fs-#{$index}{
+        color: $val;
+    }
+    .bg-#{$index}{
+        background-color: $val;
+    }
+}
+
+// width  height
+.w-100 {
+    width: 100%
+}
+.h-100 {
+    height: 100%
+}
+
+// 字体大小
+@each $sizeKey, $size in $font-sizes {
+    .fs-#{$sizeKey} {
+        font-size: $size * $base-font-size;
+    }
+}
+
+// text对其方式
+@each $var in (left, center, right) {
+    .text-#{$var} {
+        text-align: $var !important;
+    }
+}
+
+// flex布局
+.d-flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex-1 {
+    flex: 1;
+}
+.flex-end {
+    align-self: flex-end;
+}
+
+// justify-content
+$flex-jc: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    between: space-between,
+    around: space-around,
+);
+
+// align-items 
+$flex-ai: (
+    start: flex-start,
+    center: flex-center,
+    end: flex-end,
+    stretch: stretch,
+);
+@each $key, $val in $flex-jc {
+    .jc-#{$key} {
+        justify-content: $val;
+    }
+}
+
+
+
+@each $key, $val in $flex-ai {
+    .ai-#{$key} {
+        align-items: $val;
+    }
+}
+
+
+// 边距
+$spacing-types: (
+    m: margin,
+    p: padding,
+);
+$spacing-directions: (
+    t: top,
+    l: left,
+    b: bottom,
+    r: right
+);
+
+// m-0,mx-0
+@each $typeKey, $type in $spacing-types {
+    @each $sizeKey, $size in $spacing-sizes{
+        //m-0:{margin: 0};
+        .#{$typeKey}-#{$sizeKey} {
+            #{$type}: $size * $spacing-base-size;
+        }
+        // .mx-1, .my-1
+        .#{$typeKey}x-#{$sizeKey} {
+            #{$type}-left: $size * $spacing-base-size;
+            #{$type}-right: $size * $spacing-base-size;
+        }
+        .#{$typeKey}y-#{$sizeKey} {
+            #{$type}-top: $size * $spacing-base-size;
+            #{$type}-bottom: $size * $spacing-base-size;
+        }
+    }
+    
+    // mt-1: {margin-top:1rem}
+    @each $directionKey, $direction in $spacing-directions {
+        @each $sizeKey, $size in $spacing-sizes {
+            .#{$typeKey}#{$directionKey}-#{$sizeKey}{
+                #{$type}-#{$direction}: $size * $spacing-base-size;
+            }
+        }
+    }
+}
+
+.no-ban {
+    color: map-get($map: $colors, $key: 'red-5');
+    transition: all 0.5s ease;
+}
+.section:hover {
+    cursor: pointer;
+}
+.no-ban1{
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.ban {
+    color: map-get($map: $colors, $key: 'red-8');
+    // router-link禁止点击事件
+    pointer-events: none;
+    transition: all 0.5s ease;
+    
+}
+
+.ban1 {
+    color: map-get($map: $colors, $key: 'black-6');
+    transition: all 0.5s ease;
+}

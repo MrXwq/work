@@ -1,0 +1,91 @@
+//colors 变量
+$colors: (
+    // 改变后大字体
+    'red-1': #fd4f59,
+    // 改变后小字体
+    'red-2': #ffb6b7,
+    // 改变后背景
+    'red-3': #fff8f6,
+    // 改变后边框
+    'red-4': #f6a99d,
+    // 图标激活颜色
+    'red-5': #fa7c75,
+    // 图标背景
+    'red-6': #fdeae8,
+    // 独立摄影师字体
+    'red-7': #fe8289,
+    // 图标未激活颜色
+    'red-8': #fed4d2,
+
+    // 未改变大字体
+    'black-1': #373737,
+    // 未改变小字体
+    'black-2': #aeaeae,
+    // 未改变背景
+    'black-3': #f6f6f6,
+    // 未改变边框
+    'black-4': #f0f0f0,
+    //适合字体
+    'black-5': #bcbcbc,
+    // 标题未激活颜色
+    'black-6': #d1d1d1,
+    // 弹窗颜色
+    'black-7': #848484,
+
+    'white': #ffffff,
+);
+
+
+// 字体变量
+// 基础字体大小
+$base-font-size: 1rem;
+$font-sizes: (
+    s: 0.4615, //6px
+    ss: 0.7692, //10px
+    sss: 0.9231, //12px
+    d: 1, //13px
+    g: 1.0769, //14px
+    gg: 1.2308, //16px
+);
+
+
+// justify-content
+$flex-jc: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    between: space-between,
+    around: space-around,
+);
+
+// align-items 
+$flex-ai: (
+    start: flex-start,
+    center: flex-center,
+    end: flex-end,
+    stretch: stretch,
+);
+
+
+// 边距
+$spacing-types: (
+    m: margin,
+    p: padding,
+);
+$spacing-directions: (
+    t: top,
+    l: left,
+    b: bottom,
+    r: right
+);
+$spacing-base-size: 1rem;
+$spacing-sizes: (
+    0: 0,
+    1: 0.25,
+    2: 0.5,
+    3: 1,
+    4: 1.5,
+    5: 3,
+    6: 3.25,
+    7: 4,
+);
