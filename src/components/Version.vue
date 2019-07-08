@@ -18,7 +18,7 @@
                     class="icon-style iconfont  fs-red-5 p-3 bg-red-6" 
                     style="font-size:2rem" 
                     :class="[
-                        {'ban': flag && (i == 1 || i == 4 || i == 5 || i == 6 || i == 8),
+                        {'ban': flag && data.identity,
                         'no-ban': !flag,
                         'section:hover': !flag
                         },
@@ -29,7 +29,7 @@
                 <!-- 标题 -->
                 <div class="font-title fs-s mt-3" 
                     :class="{
-                        'ban1': flag && (i == 1 || i == 4 || i == 5 || i == 6 || i == 8), 
+                        'ban1': flag && data.identity, 
                         'no-ban1': !flag
                         }"
                 >
@@ -53,16 +53,16 @@ export default {
 
             // 这个数据到时可以服务端传
             mes: [
-                {iconName:'meh',title:'标题1'},
-                {iconName:'meh',title:'标题12'},
-                {iconName:'meh',title:'标题13'},
-                {iconName:'meh',title:'标题14'},
-                {iconName:'meh',title:'标题15'},
-                {iconName:'meh',title:'标题16'},
-                {iconName:'meh',title:'标题17'},
-                {iconName:'meh',title:'标题18'},
-                {iconName:'meh',title:'标题19'},
-                {iconName:'meh',title:'标题10'},
+                {identity:false, iconName:'meh', title:'标题1'},
+                {identity:true, iconName:'meh', title:'标题12'},
+                {identity:false, iconName:'meh', title:'标题13'},
+                {identity:false, iconName:'meh', title:'标题14'},
+                {identity:true, iconName:'meh', title:'标题15'},
+                {identity:true, iconName:'meh', title:'标题16'},
+                {identity:true, iconName:'meh', title:'标题17'},
+                {identity:false, iconName:'meh', title:'标题18'},
+                {identity:true, iconName:'meh', title:'标题19'},
+                {identity:false, iconName:'meh', title:'标题10'},
             ] 
         }
         
