@@ -53,16 +53,16 @@ export default {
 
             // 这个数据到时可以服务端传
             mes: [
-                {identity:false, iconName:'meh', title:'标题1'},
-                {identity:true, iconName:'meh', title:'标题12'},
-                {identity:false, iconName:'meh', title:'标题13'},
-                {identity:false, iconName:'meh', title:'标题14'},
-                {identity:true, iconName:'meh', title:'标题15'},
-                {identity:true, iconName:'meh', title:'标题16'},
-                {identity:true, iconName:'meh', title:'标题17'},
-                {identity:false, iconName:'meh', title:'标题18'},
-                {identity:true, iconName:'meh', title:'标题19'},
-                {identity:false, iconName:'meh', title:'标题10'},
+                {identity: !this.flag, iconName: 'meh', title: '标题1'},
+                {identity: this.flag, iconName: 'meh', title: '标题12'},
+                {identity: !this.flag, iconName: 'meh', title: '标题13'},
+                {identity: !this.flag, iconName: 'meh', title: '标题14'},
+                {identity: this.flag, iconName: 'meh', title: '标题15'},
+                {identity: this.flag, iconName: 'meh', title: '标题16'},
+                {identity: this.flag, iconName: 'meh', title: '标题17'},
+                {identity: !this.flag, iconName: 'meh', title: '标题18'},
+                {identity: this.flag, iconName: 'meh', title: '标题19'},
+                {identity: !this.flag, iconName: 'meh', title: '标题10'},
             ] 
         }
         
