@@ -27,7 +27,7 @@
                 ></router-link>
 
                 <!-- 标题 -->
-                <div class="fs-s mt-3" 
+                <div class="font-title fs-s mt-3" 
                     :class="{
                         'ban1': flag && (i == 1 || i == 4 || i == 5 || i == 6 || i == 8), 
                         'no-ban1': !flag
@@ -50,6 +50,7 @@ export default {
     },
     data(){
         return {
+
             // 这个数据到时可以服务端传
             mes: [
                 {iconName:'meh',title:'标题1'},
