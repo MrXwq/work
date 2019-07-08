@@ -4,13 +4,13 @@
       
       <!-- advanced -->
       <router-link tag="div" :to="`/vip/version/${this.id}`" 
-        :class="{active: flag1,'no-active':!flag1}"
+        :class="{active: flag1,'no-active': !flag1}"
         @click.native="changeColor" 
         class="advanced px-6 py-6 text-center"
       >
         <h2>高级版</h2>
         <span class="fs-sss smallFont" 
-          :class="{'fs-red-4':flag1, 'fs-black-2': !flag1}"
+          :class="{'fs-red-4': flag1, 'fs-black-2': !flag1}"
         >
         适合独立摄影师
         </span>
@@ -18,7 +18,7 @@
 
       <!-- customize -->
       <router-link tag="div" :to="`/vip/version/${this.id1}`" 
-        :class="{active: flag2,'no-active':!flag2}"
+        :class="{active: flag2,'no-active': !flag2}"
         @click.native="changeColor"
         class="tailor-made px-6 py-6 text-center"
       >
@@ -34,14 +34,14 @@
     
     <!-- Alert advanced-->
     <Alert v-show="flag11">
-      <div class="alert-content p-5">
+      <div class="alert-content p-5"  @closee="close1">
         <h2>高级版-标题1</h2>
         <div class="fs-black-7 fs-ss pt-4">高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文</div>
       </div>
     </Alert>
 
     <!-- Alert customize-->
-    <Alert v-show="flag22">
+    <Alert v-show="flag22"  @closee="close2">
       <div class="alert-content p-5">
         <h2>定制版-标题1</h2>
         <div class="fs-black-7 fs-ss pt-4">定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文</div>

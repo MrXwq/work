@@ -1,5 +1,5 @@
 <template>
-    <div id="alert">
+    <div id="alert" @click="$emit('closee')">
       <slot></slot>  
       <div class="mt-5">
         <i class="iconfont icon-close- fs-white" style="font-size: 2rem;"></i>
