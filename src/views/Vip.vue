@@ -33,7 +33,7 @@
     </div>
     
     <!-- Alert advanced-->
-    <Alert v-show="flag11" @closee="close1">
+    <Alert v-show="flag11">
       <div class="alert-content p-5">
         <h2>高级版-标题1</h2>
         <div class="fs-black-7 fs-ss pt-4">高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文高级版正文</div>
@@ -41,7 +41,7 @@
     </Alert>
 
     <!-- Alert customize-->
-    <Alert v-show="flag22" @closee="close2">
+    <Alert v-show="flag22">
       <div class="alert-content p-5">
         <h2>定制版-标题1</h2>
         <div class="fs-black-7 fs-ss pt-4">定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文定制版正文</div>
@@ -98,7 +98,6 @@ export default {
     },
     close2() {
         this.flag22 = false
-        this.cookie = 1
       }
   },
   created() {
