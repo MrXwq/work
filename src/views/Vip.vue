@@ -3,7 +3,7 @@
     <div class="top d-flex jc-around bg-white pt-3 pb-1">
       
       <!-- advanced -->
-      <router-link tag="div" :to="`/vip/version/${this.id}`" 
+      <router-link tag="div" :to="`/vip/${this.id}`" 
         :class="{active: flag1,'no-active': !flag1}"
         @click.native="changeColor" 
         class="advanced px-6 py-6 text-center"
@@ -17,7 +17,7 @@
       </router-link>
 
       <!-- customize -->
-      <router-link tag="div" :to="`/vip/version/${this.id1}`" 
+      <router-link tag="div" :to="`/vip/${this.id1}`" 
         :class="{active: flag2,'no-active': !flag2}"
         @click.native="changeColor"
         class="tailor-made px-6 py-6 text-center"
@@ -111,12 +111,15 @@ export default {
 
 <style lang="scss">
  @import '../assets/scss/_variables.scss';
- .active {
-   background: map-get($map: $colors, $key: 'red-3');
-   border: 1px solid map-get($map: $colors, $key: 'red-4' );
-   color: map-get($map: $colors, $key: 'red-1');
-   transition: all 0.5s ease;
+ .top{
+    .router-link-active {
+    background: map-get($map: $colors, $key: 'red-3');
+    border: 1px solid map-get($map: $colors, $key: 'red-4' );
+    color: map-get($map: $colors, $key: 'red-1');
+    transition: all 0.5s ease;
+  }
  }
+ 
  .no-active {
    background: map-get($map: $colors, $key: 'black-3');
    border: 1px solid map-get($map: $colors, $key: 'black-4' );

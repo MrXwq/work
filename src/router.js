@@ -9,23 +9,19 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Main,
-      children: [
-        {
-          path: '/', 
-          name: 'home',
-          component: () => import('./views/Home.vue')
-        }
-      ]
+      name: 'main',
+      component: Main
     },
+    
     {
-      path: '/vip/version/advanced',
+      path: '/vip',
       name: 'vip',
+      redirect: '/vip/advanced',
       component: () => import('./views/Vip.vue'),
       children: [
         {
-          path: '/vip/version/:id',
-          name: 'advanced',
+          path: ':id',
+          name: 'version',
           component: () => import('./components/Version.vue'),
           props: true
         }
